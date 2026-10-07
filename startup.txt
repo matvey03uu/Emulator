@@ -1,0 +1,6 @@
+echo запуск эмулятора
+ls
+cd test
+echo открыт startup.txt
+unknown
+ls
