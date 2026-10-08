@@ -9,6 +9,7 @@ class Node:
 
 
 def execute_command(command_line):
+    command_line = command_line.replace("$HOME", os.getcwd())
     command_line = os.path.expandvars(command_line)
 
     args = command_line.split()
@@ -27,7 +28,7 @@ def execute_command(command_line):
         return False
 
     elif command == "echo":
-        print(*arguments)
+        print(arguments[0])
 
     elif command == "ls":
         if arguments:
@@ -81,7 +82,6 @@ def repl(vfs_path, vfs_name="VFS"):
 
 def parse_arguments():
     parser = argparse.ArgumentParser(
-        description="Эмулятор VFS с REPL-интерфейсом"
     )
 
     parser.add_argument(

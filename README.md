@@ -280,8 +280,8 @@ cd /home
 Для Windows:
 
 ```text
-VFS:/> cd %USERPROFILE%
-cd C:\Users\Матвей
+VFS:/> echo $HOME
+C:\Users\Matvey.SRG\Documents\GitHub\Emulator
 ```
 
 
