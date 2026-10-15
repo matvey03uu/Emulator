@@ -28,7 +28,7 @@ def execute_command(command_line):
         return False
 
     elif command == "echo":
-        print(arguments[0])
+        print(*arguments)
 
     elif command == "ls":
         if arguments:
